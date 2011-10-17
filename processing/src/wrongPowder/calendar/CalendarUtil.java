@@ -47,24 +47,19 @@ public class CalendarUtil implements CalendarConstants {
 	 * wngCalendar a Constructor, usually called in the setup() method in your
 	 * sketch to initialize and start the class.
 	 * 
-	 * @example wngCalendar
+	 * @example calendar_basic
 	 * @param theParent
 	 */
 	public CalendarUtil(PApplet parent) {
 		p5 = parent;
-                //welcome();
 	}
-
-        /*
-	 * welcome text for processing IDE console
-	 */
-	/*protected void welcome() {
-		System.out.println("### START wngCalendar CLASS");
-	}*/
+	
+	
 
 	/**
 	 * timestamp return a timestamp
 	 * 
+	 * @example calendar_basic
 	 * @return String
 	 */
 	public String timestamp() {
@@ -72,10 +67,13 @@ public class CalendarUtil implements CalendarConstants {
 		String ts = sdf.format(new Date());
 		return ts;
 	}
-
+	
+	
+	
 	/**
 	 * timezone return a timezone
 	 * 
+	 * @example calendar_basic
 	 * @return String
 	 */
 	public String timezone() {
@@ -87,6 +85,7 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * unixtime return the unixtime as an integer
 	 * 
+	 * @example calendar_basic
 	 * @return int
 	 */
 	public int unixtime() {
@@ -116,6 +115,7 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * eraDesignator return a era designator
 	 * 
+	 * @example calendar_basic
 	 * @return String
 	 */
 	public String eraDesignator() {
@@ -127,6 +127,7 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * weekInYear return week in year
 	 * 
+	 * @example calendar_basic
 	 * @return int
 	 */
 	public int weekInYear() {
@@ -139,6 +140,7 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * weekInMonth return week in month
 	 * 
+	 * @example calendar_basic
 	 * @return int
 	 */
 	public int weekInMonth() {
@@ -151,6 +153,7 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * dayInYear return day in year
 	 * 
+	 * @example calendar_basic
 	 * @return int
 	 */
 	public int dayInYear() {
@@ -163,6 +166,7 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * dayInMonth return day in month
 	 * 
+	 * @example calendar_basic
 	 * @return int
 	 */
 	public int dayInMonth() {
@@ -175,6 +179,7 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * dayInWeek return day in week
 	 * 
+	 * @example calendar_basic
 	 * @return String
 	 */
 	public String dayInWeek() {
@@ -186,13 +191,11 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * getUnixtime return the unixtime of a date as an integer
 	 * 
-	 * @param y
-	 *        int
-	 * @param m
-	 *        int
-	 * @param d
-	 *        int
-	 * @return int
+	 * @example calendar_basic
+	 * @param y int year
+	 * @param m int month
+	 * @param d int day
+	 * @return int unixtime
 	 */
 	public int getUnixtime(int y, int m, int d) {
 		String dname = "### not correct date";
