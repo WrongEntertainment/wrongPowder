@@ -18,5 +18,14 @@ void setup() {
   size(600, 600);
   
   // Get the Unixtime.
-  println(CAL.unixtime());
+  println("### unixtime(): \t"+CAL.unixtime());
+  println("### getUnixtime(): \t"+CAL.getUnixtime(2011, 10, 17));
+  println("### timestamp(): \t"+CAL.timestamp());
+  println("### timezone(): \t"+CAL.timezone());
+    
+  for(int i=1; i<=12; i++) {
+    println("### getMonth(): \t"+CAL.getMonth(i));
+    println("### getMonthDays(): \t"+CAL.getMonthDays(i));
+    
+  }
 }
