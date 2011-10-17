@@ -1,29 +1,29 @@
 /**
- * wngCalendar is a class of the wng.agent library.
+ *  wrongPowder is developed by wrong-entertainment & powder
  *
- * (c) paul vollmer, 2010
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
+ *  Copyright 2011 Paul Vollmer
+ *  paulvollmer.net
+ *  vollmerpaul@yahoo.de
  * 
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
+ *  This file is part of wrongPowder library.
+ *
+ *  wrongPowder is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  GNU Lesser General Public License for more details.
+ *  
+ *  You should have received a copy of the GNU Lesser General Public License
+ *  along with wrongPowder. If not, see <http://www.gnu.org/licenses/>.
  * 
- * You should have received a copy of the GNU Lesser General
- * Public License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
- * Boston, MA  02111-1307  USA
- * 
- * @author		paul vollmer http://www.wrong-entertainment.com
- * @modified	2010/11/10
- * @version		0.1.0
+ *  @author		Paul Vollmer
+ *  @modified	##date##
+ *  @version	##version##
  */
 
-package wrongPowder.Calendar;
+package wrongPowder.calendar;
+
+
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -38,43 +38,9 @@ import processing.core.PApplet;
  * @author Paul Vollmer, wrong-entertainment.com
  * 
  */
-public class CalendarUtil {
+public class CalendarUtil implements CalendarConstants {
 
 	private PApplet p5;
-
-	public final String MON = "Monday";
-	public final String TUE = "Tuesday";
-	public final String WED = "Wednesday";
-	public final String THU = "Thursday";
-	public final String FRI = "Friday";
-	public final String SAT = "Saturday";
-	public final String SUN = "Sunday";
-
-	public final String JAN = "Janurary";
-	public final String FEB = "February";
-	public final String MAR = "March";
-	public final String APR = "April";
-	public final String MAY = "May";
-	public final String JUN = "Juni";
-	public final String JUL = "July";
-	public final String AUG = "August";
-	public final String SEP = "September";
-	public final String OCT = "October";
-	public final String NOV = "November";
-	public final String DEC = "Decenber";
-
-	public final int JAN_DAYS = 31;
-	public final int FEB_DAYS = 28;
-	public final int MAR_DAYS = 31;
-	public final int APR_DAYS = 30;
-	public final int MAY_DAYS = 31;
-	public final int JUN_DAYS = 30;
-	public final int JUL_DAYS = 31;
-	public final int AUG_DAYS = 31;
-	public final int SEP_DAYS = 30;
-	public final int OCT_DAYS = 31;
-	public final int NOV_DAYS = 30;
-	public final int DEC_DAYS = 31;
 
 	
 	/**
