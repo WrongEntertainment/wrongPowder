@@ -220,19 +220,13 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * getUnixtime return the unixtime of a date as an integer
 	 * 
-	 * @param y
-	 *        int
-	 * @param m
-	 *        int
-	 * @param d
-	 *        int
-	 * @param hou
-	 *        int
-	 * @param min
-	 *        int
-	 * @param sec
-	 *        int
-	 * @return int
+	 * @param y int
+	 * @param m int
+	 * @param d int
+	 * @param hou int
+	 * @param min int
+	 * @param sec in
+	 * @return int unixtime
 	 */
 	public int getUnixtime(int y, int m, int d, int hou, int min, int sec) {
 		String dname = "### not correct date";
@@ -256,9 +250,10 @@ public class CalendarUtil implements CalendarConstants {
 
 	/**
 	 * getDay return the name of a day as a String
-	 * 
-	 * @param m
-	 *        int
+	 *
+	 * @param y int
+	 * @param m int
+	 * @param d int
 	 * @return String
 	 */
 	public String getDay(int y, int m, int d) {
@@ -269,25 +264,53 @@ public class CalendarUtil implements CalendarConstants {
 	/**
 	 * getMonth return the name of a month as a String
 	 * 
-	 * @param m
-	 *        int
+	 * @param m int
 	 * @return String
 	 */
 	public String getMonth(int m) {
-		int im = m;
-		String sm = "### not a correct month number";
-		if (im == 1) sm = JAN;
-		if (im == 2) sm = FEB;
-		if (im == 3) sm = MAR;
-		if (im == 4) sm = APR;
-		if (im == 5) sm = MAY;
-		if (im == 6) sm = JUN;
-		if (im == 7) sm = JUL;
-		if (im == 8) sm = AUG;
-		if (im == 9) sm = SEP;
-		if (im == 10) sm = OCT;
-		if (im == 11) sm = NOV;
-		if (im == 12) sm = DEC;
+		String sm;
+		switch(m) {
+		case 1:
+			sm = JAN;
+			break;
+		case 2:
+			sm = FEB;
+			break;
+		case 3:
+			sm = MAR;
+			break;
+		case 4:
+			sm = APR;
+			break;
+		case 5:
+			sm = MAY;
+			break;
+		case 6:
+			sm = JUN;
+			break;
+		case 7:
+			sm = JUL;
+			break;
+		case 8:
+			sm = AUG;
+			break;
+		case 9:
+			sm = SEP;
+			break;
+		case 10:
+			sm = OCT;
+			break;
+		case 11:
+			sm = NOV;
+			break;
+		case 12:
+			sm = DEC;
+			break;
+		default:
+			System.err.println("### not a correct month number");
+			sm = "default";
+			break;
+		}
 		return sm;
 	}
 
