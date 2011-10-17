@@ -23,7 +23,7 @@
  * @version		0.1.0
  */
 
-package wrongPowder.calendar;
+package wrongPowder.Calendar;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
