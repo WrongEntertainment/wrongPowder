@@ -27,7 +27,8 @@ package wrongPowder.calendar;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import processing.core.PApplet;
+import java.util.Calendar;
+//import processing.core.PApplet;
 
 
 /**
@@ -40,7 +41,7 @@ import processing.core.PApplet;
  */
 public class CalendarUtil implements CalendarConstants {
 
-	private PApplet p5;
+	//private PApplet p5;
 
 	
 	/**
@@ -50,8 +51,8 @@ public class CalendarUtil implements CalendarConstants {
 	 * @example calendar_basic
 	 * @param theParent
 	 */
-	public CalendarUtil(PApplet parent) {
-		p5 = parent;
+	public CalendarUtil() {//PApplet parent) {
+		//p5 = parent;
 	}
 	
 	
@@ -91,17 +92,21 @@ public class CalendarUtil implements CalendarConstants {
 	public int unixtime() {
 		int[] daysToMonthbegin = { 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334 }; // ohne Schalttag
 		int unix_time;
-		int y = p5.year();
+		Calendar toDay = Calendar.getInstance();
+		int y = toDay.get(Calendar.YEAR);
+		int m = toDay.get(Calendar.MONTH);
+		int d = toDay.get(Calendar.DAY_OF_MONTH);
+		/*int y = p5.year();
 		int m = p5.month();
-		int d = p5.day();
+		int d = p5.day();*/
 
 		int Year = y - 1970;
 		int schaltjahre = ((y - 1) - 1968) / 4 - ((y - 1) - 1900) / 100 + ((y - 1) - 1600) / 400;
-		int Second = p5.second();
+		int Second = toDay.get(Calendar.SECOND);
 		;
-		int Minute = p5.minute();
+		int Minute = toDay.get(Calendar.MINUTE);
 		;
-		int Hour = p5.hour();
+		int Hour = toDay.get(Calendar.HOUR);
 		;
 		unix_time = Second + 60 * Minute + 60 * 60 * Hour
 				    + (daysToMonthbegin[m - 1] + d - 1) * 60 * 60 * 24
